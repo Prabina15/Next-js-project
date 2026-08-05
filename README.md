@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next-js
 
-## Getting Started
+- React-js full stack framework for development
+- In addition to building UI, next-js is also provides features like routing, rendering optimization, data fetching etc.
+- It uses react server component.
+- Opinonment framework(file, folder conventions)
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Routing: file based routing
+2. Rendering: Server side rendering(SSRI), Client side rendering(CSSRI), Static side Rendering(SSG)
+3. Optimization: image file
+4. Data fetching/File system
+5. Styling
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## React server component
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. Server Component(default)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- All react component in Next-js are server component by default
+- Server side tasks like data fetching, files read, database data fetching, async tasks.
+- Cannot use react, hooks, events, user interactions.
 
-## Learn More
+2. Client Component
 
-To learn more about Next.js, take a look at the following resources:
+- Can use react, hooks events, user interactions.
+- Traditional react components.
+- Use the directive `use client` at the top of component file.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Routing 
 
-## Deploy on Vercel
+- File based routing
+- All routes must be inside `src/app` directory
+- Every route must have `page.js` or `page.tsx` file
+- `page.js` or `page.tsx` must have a default export
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Simple routes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Create a folder inside /src/app and add a page.js file
+- /src/app/about/page.js
+- /src/app/contact/page.js
+
+2. Nested routes
+
+- Create a folder inside a folder for nested routes
+- src/app/courses/frontend/react/page.js
+- src/app/courses/frontend/next/page.js
+- src/app/courses/backend/express/page.js
+
+3. Dynamic routes
+
+- Create a folder enclosed by []
+- /src/app/products/[id]/page.js
+
+4. Nested dynamic routes
+
+- /src/app/products/[id]/reviews/[reviewId]/page.js
+
+5. Catch all segments
+
+- /src/app/blogs/[...slug]/page.js 
+
+7. Private folders
+- /src/app/_folder/
+
+8. Route groups
+
+- /src/app/(auth)
+
+## Layouts
+
+- UI components that is share among different pages
+- `layout.js` or `layout.tsx`
+
+## Special files or Next.js
+
+- page.js
+- layout.js
+- not-found.js
+- loading.js
+
+
