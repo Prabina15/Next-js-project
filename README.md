@@ -79,5 +79,35 @@
 - layout.js
 - not-found.js
 - loading.js
+- error.js
+
+## Link
+
+- <Link> for navigation, similar to <a>
+- For programmatic navigation, use the `useRouter` hook.
+
+
+## Params & SearchParams
+
+1. For Server component
+
+- params: dynamic route params, available on page.js & layout.js
+- searchParams: query, available on page.js
+
+2. For client component
+
+- useParams()
+- useSearchParams()
+
+## Metadata
+
+- Metadata api is used to define metadata of the page
+- page.js /layout.js
+- Useful for search engine optimization(SEO)
+- static: metadata
+- dynamic: generateMetadata
+
+
+
 
 
